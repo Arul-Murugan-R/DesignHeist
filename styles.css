@@ -99,6 +99,7 @@ body {
 	z-index: 0;
 	border-radius: 10px;
 	transition: transform 0.3s;
+	overflow: hidden;
 }
 
 .content-img-1 {
@@ -109,14 +110,18 @@ body {
 
 .overlay-container-1::before {
 	content: "";
-	background-color: transparent;
+	/* background-color: transparent; */
 	position: absolute;
 	left: 0;
 	top: 0;
 	bottom: 0;
 	right: 0;
-	background-color: rgb(51, 47, 47, 0.8);
-	transition: transform 1s;
+	background-image: linear-gradient(
+		transparent,
+		rgb(51, 47, 47, 0.8),
+		rgb(51, 47, 47, 1)
+	);
+	transition: transform 750ms;
 	transform: scaleY(0);
 	transform-origin: bottom;
 }
@@ -124,7 +129,7 @@ body {
 .inner-overlay {
 	position: absolute;
 	bottom: 0;
-    margin-bottom: auto;
+	margin-bottom: auto;
 }
 
 .title-1 {
@@ -142,7 +147,7 @@ body {
 
 .content-card-1:hover .overlay-container-1::before,
 .content-card-1:focus .overlay-container-1::before {
-	transform: scaleY(0.35	);
+	transform: scaleY(0.35);
 }
 
 .content-card-1:hover {
