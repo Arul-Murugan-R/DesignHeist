@@ -1,5 +1,13 @@
 body {
 	margin: 5rem;
+	background-image: linear-gradient(
+		/* transparent, */ rgb(10, 11, 11, 0.8),
+		rgb(7, 7, 6, 0.8),
+		rgb(3, 3, 2, 0.8),
+		rgb(1.5, 1.5, 1, 0.8),
+		rgb(0, 0, 0, 0.8)
+	);
+	height: 1000px;
 }
 
 .content-card {
@@ -8,7 +16,7 @@ body {
 	transition: transform 0.3s;
 	position: relative;
 	width: 300px;
-	height: 350px;
+	height: 250px;
 	z-index: 0;
 	border-radius: 10px;
 }
@@ -50,6 +58,7 @@ body {
 
 .title {
 	margin: auto auto 4px 4px;
+	transition: 1.5s;
 	display: none;
 }
 
@@ -65,7 +74,8 @@ body {
 }
 
 .content-card:hover .overlay-container {
-	background-color: rgb(51, 47, 47, 0.8);
+	/* background-color: rgb(51, 47, 47, 0.8); */
+	background-color: rgb(217, 2, 238, 0.8);
 	color: aliceblue;
 }
 
@@ -91,11 +101,11 @@ body {
 /* Aadhi's work */
 
 .content-card-1 {
-	margin: 0 0.5rem;
+	margin: 0 0.2rem;
 	display: inline-block;
 	position: relative;
-	width: 300px;
-	height: 350px;
+	width: 200px;
+	height: 250px;
 	z-index: 0;
 	border-radius: 10px;
 	transition: transform 0.3s;
@@ -118,9 +128,11 @@ body {
 	right: 0;
 	background-image: linear-gradient(
 		transparent,
-		rgb(51, 47, 47, 0.8),
-		rgb(51, 47, 47, 1)
+		rgb(51, 47, 47, 0.4),
+		rgb(51, 47, 47, 0.6),
+		rgb(51, 47, 47, 0.8)
 	);
+
 	transition: transform 750ms;
 	transform: scaleY(0);
 	transform-origin: bottom;
@@ -143,6 +155,7 @@ body {
 	text-align: center;
 	margin: 0 auto 0;
 	display: none;
+	font-size: smaller;
 }
 
 .content-card-1:hover .overlay-container-1::before,
@@ -169,3 +182,25 @@ body {
 	transition: height 5s, ease-in-out;
 	background-color: rgb(51, 47, 47, 0.8);
 } */
+
+
+
+.card-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+/* .carousel-control-prev,
+.carousel-control-next {
+	background-color: #e1e1e1;
+	width: 5vh;
+	height: 5vh;
+	border-radius: 50%;
+	top: 50%;
+	transform: translateY(-50%);
+} */
+
+.carousel-item {
+	height: 350px !important;
+	width: 750px !important;
+}
