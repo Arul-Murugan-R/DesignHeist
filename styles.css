@@ -1,24 +1,19 @@
-body {
-	margin: 5rem;
-	background-image: linear-gradient(
-		/* transparent, */ rgb(10, 11, 11, 0.8),
-		rgb(7, 7, 6, 0.8),
-		rgb(3, 3, 2, 0.8),
-		rgb(1.5, 1.5, 1, 0.8),
-		rgb(0, 0, 0, 0.8)
-	);
-	height: 1000px;
+/* Aadhi's work */
+body{
+    background-color: black;
 }
 
 .content-card {
-	margin: 0 0.5rem;
+	/* margin: 0 0.5rem; */
 	display: inline-block;
-	transition: transform 0.3s;
 	position: relative;
-	width: 300px;
+	width: 200px;
 	height: 250px;
 	z-index: 0;
+    border: solid 4px white;
 	border-radius: 10px;
+	transition: transform 0.3s;
+	overflow: hidden;
 }
 
 .content-img {
@@ -28,97 +23,6 @@ body {
 }
 
 .overlay-container::before {
-	content: "";
-	background-color: rgba(175, 20, 20, 0.8);
-	transition: transform 1s;
-	transform: scaleY(0);
-	transform-origin: bottom;
-}
-
-.content-card:hover .overlay-container::before,
-.content-card:focus .overlay-container::before {
-	transform: scaleY(0.45);
-}
-
-.overlay-container {
-	display: flex;
-	color: transparent;
-	background-color: transparent;
-	transition: color 1s;
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	border-radius: 10px;
-	flex-direction: column;
-}
-
-.title {
-	margin: auto auto 4px 4px;
-	transition: 1.5s;
-	display: none;
-}
-
-.description {
-	text-align: center;
-	margin: 0 auto 0;
-	display: none;
-}
-
-.content-card:hover {
-	transform: scale(1.2, 1.1);
-	z-index: 1;
-}
-
-.content-card:hover .overlay-container {
-	/* background-color: rgb(51, 47, 47, 0.8); */
-	background-color: rgb(217, 2, 238, 0.8);
-	color: aliceblue;
-}
-
-.content-card:hover .title,
-.content-card:hover .description {
-	display: block;
-}
-
-/* testing */
-
-.test-div {
-	border-radius: 20px;
-	height: 500px;
-	width: 500px;
-}
-
-.test-div img {
-	width: 100%;
-	height: 100%;
-	border-radius: 20px;
-}
-
-/* Aadhi's work */
-
-.content-card-1 {
-	margin: 0 0.2rem;
-	display: inline-block;
-	position: relative;
-	width: 200px;
-	height: 250px;
-	z-index: 0;
-	border-radius: 10px;
-	transition: transform 0.3s;
-	overflow: hidden;
-}
-
-.content-img-1 {
-	width: 100%;
-	height: 100%;
-	border-radius: 10px;
-}
-
-.overlay-container-1::before {
 	content: "";
 	/* background-color: transparent; */
 	position: absolute;
@@ -144,13 +48,13 @@ body {
 	margin-bottom: auto;
 }
 
-.title-1 {
+.title {
 	color: aliceblue;
 	margin: auto auto 4px 4px;
 	display: none;
 }
 
-.description-1 {
+.description {
 	color: aliceblue;
 	text-align: center;
 	margin: 0 auto 0;
@@ -158,49 +62,18 @@ body {
 	font-size: smaller;
 }
 
-.content-card-1:hover .overlay-container-1::before,
-.content-card-1:focus .overlay-container-1::before {
+.content-card:hover .overlay-container::before,
+.content-card:focus .overlay-container::before {
 	transform: scaleY(0.35);
 }
 
-.content-card-1:hover {
+.content-card:hover {
 	transform: scale(1.2, 1.1);
 	z-index: 1;
 }
 
-.content-card-1:hover .title-1,
-.content-card-1:hover .description-1 {
+.content-card:hover .title,
+.content-card:hover .description {
 	display: block;
 }
 
-/* .overlay-container-1 {
-	z-index: 1;
-} */
-
-/* .content-card-1:hover .overlay-container-1 {
-	height: 30%;
-	transition: height 5s, ease-in-out;
-	background-color: rgb(51, 47, 47, 0.8);
-} */
-
-
-
-.card-wrapper {
-	display: flex;
-	justify-content: center;
-}
-
-/* .carousel-control-prev,
-.carousel-control-next {
-	background-color: #e1e1e1;
-	width: 5vh;
-	height: 5vh;
-	border-radius: 50%;
-	top: 50%;
-	transform: translateY(-50%);
-} */
-
-.carousel-item {
-	height: 350px !important;
-	width: 750px !important;
-}
