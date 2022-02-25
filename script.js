@@ -5,21 +5,20 @@ const leftArrow = document.querySelector(".left-arrow-btn");
 const rightArrow = document.querySelector(".right-arrow-btn");
 
 const AllInnerCards = document.querySelectorAll(".content-card");
-let availableRight = AllInnerCards.length;
+let availableRight = 0;
 let availableLeft = 0;
 let widValues = [];
 let isLast = 0;
-// leftArrow.style.display = "none";
+leftArrow.style.display = "none";
 
 const setAvailableRight = () => {
-    const noOfCards = Math.floor(
-        parentContainer.offsetWidth / (innerContainer.offsetWidth)
-	);
+    const innerWidth = parentContainer.scrollWidth / AllInnerCards.length;
+    const noOfCards = Math.floor( parentContainer.offsetWidth  / innerWidth );
     availableRight = AllInnerCards.length - noOfCards;
-    console.log(availableRight);
-    console.log(parentContainer.scrollWidth);
+    parentContainer.style.right = 0;
     availableLeft = 0;
-    // leftArrow.style.display = "none";
+    leftArrow.style.display = "none";
+    rightArrow.style.display = "inline-block";
 };
 
 const moveRight = () => {
@@ -27,61 +26,38 @@ const moveRight = () => {
 	const parentWidth = parentContainer.offsetWidth;
     const innerWidth = parentContainer.scrollWidth / AllInnerCards.length;
     const mainWidth = mainContainer.offsetWidth;
-	const noOfCards = Math.floor(parentWidth / innerWidth);
-	// if (availableRight > 0) {
-    //     console.log(noOfCards, availableRight);
-	// 	if (availableRight) {
-	// 		let setRight = 0;
-    //         if (noOfCards >= availableRight) {
-    //             isLast = +currentRightValue;
-    //             setRight = ((availableRight - 1) * innerWidth) + (innerWidth - (parentWidth - (noOfCards * innerWidth ))) + 10;
-    //             // setRight = parentContainer.scrollWidth - (availableRight * 204);
-    //             // setRight = (AllInnerCards.length - noOfCards) * innerWidth - 20;
-    //             console.log("set", setRight);
-    //             parentContainer.style.right = `${+currentRightValue + setRight}px`;
-    //             availableLeft += Math.floor(setRight / innerWidth) + 1;
-    //             availableRight = 0;
-    //             rightArrow.style.display = "none";
-    //             widValues.push(setRight);
-    //         } else {
-    //             setRight = noOfCards * (innerWidth );
-    //             console.log(setRight);
-    //             availableLeft += Math.floor(setRight / innerWidth);
-    //             availableRight -= noOfCards;
-    //             parentContainer.style.right = `${+currentRightValue + setRight}px`;
-    //             widValues.unshift(setRight);
-    //         };
-    //         console.log(setRight);
-    //         console.log("left: ", availableLeft);
-    //         console.log("right: ", availableRight); 
-    //         leftArrow.style.display = "inline-block";
-	// 	}
-	// }
+    const widthDifference = mainWidth - parentWidth;
+    const noOfCards = Math.floor(parentWidth / innerWidth);
+    console.log(noOfCards,availableRight);
     if (availableRight > 0) {
+        leftArrow.style.display = "inline-block";
         let setRight = 0
-        if (availableLeft == 0) {
-            console.log("1");
+        if (availableLeft == 0 && noOfCards >= availableRight) {
+            setRight = (availableRight * innerWidth) + 20 - (mainWidth - (noOfCards * innerWidth) - 20);
+            availableLeft += availableRight;
+			availableRight = 0;
+			rightArrow.style.display = "none";
+        }
+        else if (availableLeft == 0) {
             setRight = noOfCards * innerWidth + 20 - ((mainWidth - noOfCards * innerWidth) / 2);
             availableLeft += noOfCards;
-            availableRight -= noOfCards
+            availableRight -= noOfCards;
         }
         else if (noOfCards >= availableRight) {
-            console.log("2");
             setRight = (availableRight * innerWidth) + ((mainWidth - (noOfCards * innerWidth)) / 2) - mainWidth + (noOfCards * innerWidth) + 20;
+            console.log(setRight);
             availableLeft += availableRight;
             availableRight = 0
+            rightArrow.style.display = "none";
         }
         else {
-            console.log("3");
+            console.log("2");
             setRight = noOfCards * innerWidth;
             availableLeft += noOfCards;
             availableRight -= noOfCards;
         }
         setRight += +currentRightValue;
         parentContainer.style.right = `${setRight}px`
-        console.log(Math.round(setRight));
-        console.log("left: ",availableLeft);
-        console.log("right: ",availableRight);
     }
 };
 
@@ -90,10 +66,17 @@ const moveLeft = () => {
 	const parentWidth = parentContainer.offsetWidth;
     const innerWidth = Math.round(parentContainer.scrollWidth / AllInnerCards.length);
     const mainWidth = mainContainer.offsetWidth;
-	const noOfCards = Math.floor(parentWidth / (innerWidth));
+    const widthDifference = mainWidth - parentWidth;
+    const noOfCards = Math.floor(parentWidth / (innerWidth));
+    rightArrow.style.display = "inline-block";
     if (availableLeft > 0) {
-        console.log("left-: ", availableLeft);
         let setLeft = 0;
+        if (availableRight == 0 && noOfCards >= availableLeft) {
+            setLeft = +currentRightValue;
+			availableRight += availableLeft;
+			availableLeft = 0;
+			leftArrow.style.display = "none";
+        }
         if (availableRight == 0) {
             setLeft = (noOfCards * innerWidth) + 20 - ((mainWidth - noOfCards * innerWidth) / 2);
             availableLeft -= noOfCards;
@@ -103,6 +86,7 @@ const moveLeft = () => {
             setLeft = +currentRightValue;
             availableRight += availableLeft;
             availableLeft = 0;
+            leftArrow.style.display = "none";
         }
         else {
             setLeft = noOfCards * innerWidth;
