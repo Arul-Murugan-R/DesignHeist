@@ -1,0 +1,120 @@
+.view-page {
+	font-family: salsa;
+	color: white;
+}
+
+.top-view {
+	height: 50vh;
+	position: relative;
+}
+
+.top-view .container-fluid {
+	display: flex;
+}
+
+.top-view .content {
+	width: 30%;
+}
+
+.top-view .image-content {
+	width: 70%;
+}
+
+.top-view .content .p-info {
+	height: 70px;
+	overflow: hidden;
+}
+
+select {
+	margin: 5px;
+	border-radius: 5px;
+	background-color: transparent;
+	color: white;
+	font-family: "Salsa";
+}
+
+select option {
+	background-color: #111;
+}
+
+.cards {
+	margin: 15px 5px;
+	padding: 10px;
+	flex-wrap: wrap;
+	border: 1px solid #fff;
+	border-radius: 7px;
+}
+
+.card-image {
+	width: 40%;
+}
+
+.card-image img {
+	width: 100%;
+}
+
+.card-content {
+	padding-left: 1rem;
+	width: 60%;
+}
+
+.card-content h2 {
+	padding: 5px 0px;
+}
+
+.card-content .label {
+	padding: 5px 0px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-content .label span {
+	font-weight: bold;
+}
+
+.card-content .info-content {
+	padding: 5px 0px;
+}
+
+.card-content h2 {
+	font-family: "Salsa";
+}
+
+@media (max-width: 775px) {
+	.top-view .image-content {
+		width: 100%;
+	}
+
+	.top-view .content {
+		width: 40%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		margin-top: auto;
+		z-index: 1;
+		bottom: 0;
+		background-color: rgb(166, 168, 170, 0.3);
+	}
+
+    .card-image {
+		width: 100%;
+		justify-content: center;
+	}
+	.card-content {
+		width: 100%;
+		font-size: 0.9rem;
+	}
+	.card-content h2 {
+		font-size: 0.98rem;
+	}
+}
+
+@media (max-width: 520px) {
+	.card-content {
+		width: 100%;
+		font-size: 0.8rem;
+	}
+	.card-content h2 {
+		font-size: 0.87rem;
+	}
+}

@@ -1,0 +1,299 @@
+body {
+	font-family: San Francisco;
+	background-color: rgb(0, 0, 0) !important;
+	height: 100vh;
+}
+
+.home-div {
+	font-family: Salsa;
+}
+
+.navbar {
+	font-family: Salsa !important;
+}
+
+.other-nav-item:hover {
+	color: beige !important;
+}
+
+.navbar.scrolled {
+	background-color: #111 !important;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+	top: 45% !important;
+	height: 50px;
+	width: auto !important;
+}
+
+.carousel-control-next {
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	right: -5px !important;
+}
+
+.carousel-control-prev {
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+	left: -5px !important;
+}
+
+#myCarousel {
+	height: 50vh;
+	border-bottom: solid 2px white;
+	overflow: hidden;
+}
+
+#myCarousel .carousel-item {
+	background-color: #000;
+	color: white;
+	box-sizing: border-box;
+}
+
+#myCarousel .container-fluid {
+	padding-right: 0 !important;
+	display: flex;
+}
+
+#myCarousel .content {
+	width: 30%;
+}
+
+#myCarousel .content .p-info {
+	height: 70px;
+	overflow: hidden;
+}
+
+.carousel-indicators [data-bs-target] {
+	border-radius: 50%;
+	height: 10px !important;
+	width: 10px !important;
+}
+
+.image-content {
+	width: 70%;
+}
+
+.image-content img {
+	width: 100%;
+	max-height: 100%;
+}
+
+.search {
+	/* height: 23px; */
+	border-radius: 23px;
+}
+
+.bi-search {
+	position: relative;
+	z-index: 1;
+	top: 8px;
+	right: 30px;
+	color: #000;
+}
+
+h2 {
+	color: white;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+.small-info {
+	color: #dfdada;
+	font-size: 12px;
+}
+
+.watch-now-btn {
+	color: black !important;
+}
+
+.add-to-playlist-btn {
+	color: white !important;
+}
+
+.menu-icon-btn {
+	color: white !important;
+	border: 1px solid white !important;
+}
+
+.icon-btns button {
+	font-size: 1.3rem !important;
+}
+
+.add-to-playlist-btn:hover {
+	background-color: rgb(25, 25, 25);
+}
+
+.watch-now-btn:hover {
+	background-color: rgb(209, 209, 209) !important;
+}
+
+.card {
+	width: 170px;
+	height: 228px;
+	margin: 3px;
+	transition: transform 1s;
+}
+
+.card:hover {
+	transform: scale(1.2);
+}
+
+.card img {
+	width: 100%;
+	height: 100%;
+}
+
+#listCarousel .container {
+	padding: 10px;
+	padding-top: 40px;
+	height: 300px;
+}
+
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+	background-color: rgba(104, 104, 104, 0.8);
+	color: white;
+}
+
+.filter {
+	background-color: #000;
+	color: rgba(255, 255, 255, 0.76);
+	font-family: "Salsa";
+	font-size: 1rem;
+}
+
+.filter select {
+	margin: 5px;
+	background-color: transparent;
+	color: rgba(255, 255, 255, 0.849);
+	font-family: "Salsa";
+	padding: 5px 10px;
+    border: solid 2px;
+	border-radius: 10px;
+}
+
+
+.filter select option {
+	background-color: #000;
+	border-radius: 7px;
+}
+
+
+.filter select-selected {
+	background-color: rgba(49, 49, 49, 0.712);
+}
+
+.trending-now-section{
+    border-bottom: 1.5px solid #c4c4c470;
+}
+
+@media (max-width: 992px) {
+	.navbar {
+		background-color: rgba(70, 70, 70, 0.87) !important;
+	}
+
+	.other-nav-item {
+		color: rgba(240, 240, 240, 0.897) !important;
+	}
+
+	.nav-link {
+		font-size: medium !important;
+	}
+
+	.icon-item {
+		margin-top: 10px;
+	}
+
+	/* .home-div {
+		margin-top: 63px;
+	} */
+
+	.slider-cards {
+		width: 200px;
+		height: 250px;
+	}
+}
+
+@media (max-width: 775px) {
+	.image-content {
+		width: 100%;
+	}
+
+	#myCarousel .content {
+		width: 40%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		margin-top: auto;
+		z-index: 1;
+		bottom: 0;
+		background-color: rgb(166, 168, 170, 0.3);
+	}
+    
+	.inner {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		border-radius: 10px;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+	.carousel-control-prev:hover {
+		background-color: rgba(0, 0, 0, 0.9);
+	}
+}
+
+@media (max-width: 600px) {
+	.home-div {
+		/* margin-top: 61px; */
+	}
+
+	.main {
+		width: 95%;
+	}
+
+	.slider-cards {
+		width: 175px;
+		height: 220px;
+	}
+
+	.small-info {
+		font-size: 10px;
+	}
+
+	.p-info {
+		font-size: 14px;
+		line-height: 1.6;
+	}
+
+	.movie-title {
+		font-size: large;
+	}
+
+	.watch-now-btn,
+	.add-to-playlist-btn {
+		font-size: small !important;
+		padding: 2px 4px !important;
+	}
+
+	.icon-btns button {
+		font-size: small !important;
+	}
+}
+
+@media (max-width: 500px) {
+	.home-div {
+		/* margin-top: 59px; */
+	}
+
+	.slider-cards {
+		width: 150px;
+		height: 200px;
+	}
+
+	.main {
+		width: 99%;
+	}
+}
