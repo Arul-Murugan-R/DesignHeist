@@ -6,8 +6,8 @@ body{
 .slider-cards{
     display: inline-block;
 	position: relative;
-	width: 250px;
-	height: 300px;
+	width: 230px;
+	height: 280px;
 	z-index: 0;
     border: solid 4px white;
 	border-radius: 10px;

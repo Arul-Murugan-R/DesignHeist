@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand fs-3" href="#">Navbar</a>
+        <a class="navbar-brand fs-3" href="/">Des Heist</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -8,20 +8,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0 mx-lg-auto">
                 <li class="nav-item">
-                    <a class="nav-link active fs-4" aria-current="page" href="#">Home</a>
+                    <a class="nav-link <% if(path==='/'){ %>active <% } %>fs-4" aria-current="page" href="/">Home</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link <% if(path==='/view'){ %>active <% } %>fs-4 other-nav-item" href="/view">Movies</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link <% if(path==='/view'){ %>active <% } %>fs-4 other-nav-item" href="/view">Web Series</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fs-4 other-nav-item" href="#">Movies</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fs-4 other-nav-item" href="#">Web Series</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fs-4 other-nav-item" href="#">Crunch</a>
+                    <a class="nav-link <% if(path==='/movies'){ %>active <% } %>fs-4 other-nav-item" href="/movies">Movies</a>
                 </li>
             </ul>
             <div class="d-flex">
+            <form action="/movies" method="post">
                 <input class="nav-item form-control search" type="search" placeholder="Search" aria-label="Search">
+            </form>
                 <i class="bi bi-search"></i>
             </div>
             <span class="nav-item icon-item"><a href=""><i class="bi bi-person-circle text-white fs-4"></i></a></span>

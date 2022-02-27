@@ -27,17 +27,17 @@ body {
 	width: auto !important;
 }
 
-.carousel-control-next {
+/* .carousel-control-next {
 	border-top-left-radius: 25px;
 	border-bottom-left-radius: 25px;
 	right: -5px !important;
-}
+} */
 
-.carousel-control-prev {
+/* .carousel-control-prev {
 	border-top-right-radius: 25px;
 	border-bottom-right-radius: 25px;
 	left: -5px !important;
-}
+} */
 
 #myCarousel {
 	height: 50vh;
@@ -188,7 +188,10 @@ h2 {
 .trending-now-section{
     border-bottom: 1.5px solid #c4c4c470;
 }
-
+.footer{
+    border: solid 3px white;
+    border-radius: 10px;
+}
 @media (max-width: 992px) {
 	.navbar {
 		background-color: rgba(70, 70, 70, 0.87) !important;
@@ -229,7 +232,7 @@ h2 {
 		margin-top: auto;
 		z-index: 1;
 		bottom: 0;
-		background-color: rgb(166, 168, 170, 0.3);
+		background-color: rgba(0,0,0,0.5);
 	}
     
 	.inner {

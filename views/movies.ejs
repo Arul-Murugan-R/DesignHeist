@@ -1,0 +1,694 @@
+<% layout("layout/boilerplate") %>
+
+    <div class="home-div">
+    <section class="pb-5">
+            <div class="container px-5 px-md-0 mt-5">
+                <div class="row">
+                    <div class="filter py-2 px-0 my-3">
+                        <select>
+                            <option selected>Action</option>
+                            <option value="1">Comedy</option>
+                            <option value="2">Drama</option>
+                            <option value="3">Biography</option>
+                            <option value="4">Crime</option>
+                        </select>
+                        <select>
+                            <option selected>English</option>
+                            <option value="1">Hindi</option>
+                            <option value="2">Telugu</option>
+                            <option value="3">Malayalam</option>
+                            <option value="4">Kanada</option>
+                        </select>
+                        <select>
+                            <option selected>2021</option>
+                            <option value="1">2020</option>
+                            <option value="2">2019</option>
+                            <option value="3">2018</option>
+                            <option value="4">2017</option>
+                        </select>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="small">
+                            <div class="content-card">
+                                <img class="content-img" src="/assets/images/movie1.jpg" alt="" />
+                                <div class="overlay-container">
+                                    <div class="inner-overlay">
+                                        <div class="d-flex flex-column justify-content-end">
+                                            <div class="icon-container d-flex justify-content-between mb-4">
+                                                <div class="d-flex flex-row justify-content-start">
+                                                    <a href="www.google.com"><i class="bi bi-play-circle-fill mx-1 icons"></i></a>
+                                                    <i class="my-auto bi bi-eye-fill icons"></i>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <button class="btn btn-sm btn-outline-light playlist-btn ms-auto">
+                                                        <i class="fa-solid fa-plus"></i>
+                                                        Add to playlist
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="card-hover-info p-1 p-sm-2 text-white">
+                                                <small class="fw-bold text-center d-block">
+                                                    <%= data[0].title %>
+                                                </small>
+                                                <div class="d-flex bottom-content">
+                                                    <small class="fw-bold pe-1">
+                                                        <%= data[0].rating %> • <%= data[0].certification %>
+                                                    </small>
+                                                    <small class="fw-bold ms-auto">
+                                                        <%= data[0].director %>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="medium">
+                            <div class="content-card">
+                                <img class="content-img" src="/assets/images/movie2.jpg" alt="" />
+                                <div class="overlay-container">
+                                    <div class="inner-overlay">
+                                        <div class="d-flex flex-column justify-content-end">
+                                            <div class="icon-container d-flex justify-content-between mb-4 me-1">
+                                                <div class="d-flex flex-row justify-content-start">
+                                                    <a href=""><i class="bi bi-play-circle-fill mx-1 icons"></i></a>
+                                                    <i class="my-auto bi bi-eye-fill icons"></i>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <button class="btn btn-sm btn-outline-light playlist-btn p-0 px-sm-1">
+                                                        <i class="fa-solid fa-plus ps-1 ps-sm-0"></i>
+                                                        Add to playlist
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="card-hover-info p-1 p-sm-2 text-white">
+                                                <small class="fw-bold text-center d-block">
+                                                    <%= data[1].title %>
+                                                </small>
+                                                <div class="d-flex bottom-content">
+                                                    <small class="fw-bold pe-1">
+                                                        <%= data[1].rating %> • <%= data[1].certification %>
+                                                    </small>
+                                                    <small class="fw-bold ms-auto">
+                                                        <%= data[1].director %>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="high">
+                            <div class="content-card">
+                                <img class="content-img" src="/assets/images/movie3.jpg" alt="" />
+                                <div class="overlay-container">
+                                    <div class="inner-overlay">
+                                        <div class="d-flex flex-column justify-content-end">
+                                            <div class="icon-container d-flex justify-content-between mb-4 me-1">
+                                                <div class="d-flex flex-row justify-content-start">
+                                                    <a href=""><i class="bi bi-play-circle-fill mx-1 icons"></i></a>
+                                                    <i class="my-auto bi bi-eye-fill icons"></i>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <button class="btn btn-sm btn-outline-light playlist-btn p-0 px-sm-1">
+                                                        <i class="fa-solid fa-plus ps-1 ps-sm-0"></i>
+                                                        Add to playlist
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="card-hover-info p-1 p-sm-2 text-white">
+                                                <small class="fw-bold text-center d-block">
+                                                    <%= data[2].title %>
+                                                </small>
+                                                <div class="d-flex bottom-content">
+                                                    <small class="fw-bold pe-1">
+                                                        <%= data[2].rating %> • <%= data[2].certification %>
+                                                    </small>
+                                                    <small class="fw-bold ms-auto">
+                                                        <%= data[2].director %>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="medium">
+                            <div class="content-card">
+                                <img class="content-img" src="/assets/images/movie4.jpg" alt="" />
+                                <div class="overlay-container">
+                                    <div class="inner-overlay">
+                                        <div class="d-flex flex-column justify-content-end">
+                                            <div class="icon-container d-flex justify-content-between mb-4 me-1">
+                                                <div class="d-flex flex-row justify-content-start">
+                                                    <a href=""><i class="bi bi-play-circle-fill mx-1 icons"></i></a>
+                                                    <i class="my-auto bi bi-eye-fill icons"></i>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <button class="btn btn-sm btn-outline-light playlist-btn p-0 px-sm-1">
+                                                        <i class="fa-solid fa-plus ps-1 ps-sm-0"></i>
+                                                        Add to playlist
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="card-hover-info p-1 p-sm-2 text-white">
+                                                <small class="fw-bold text-center d-block">
+                                                    <%= data[3].title %>
+                                                </small>
+                                                <div class="d-flex bottom-content">
+                                                    <small class="fw-bold pe-1">
+                                                        <%= data[3].rating %> • <%= data[3].certification %>
+                                                    </small>
+                                                    <small class="fw-bold ms-auto">
+                                                        <%= data[3].director %>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="high">
+                            <div class="content-card">
+                                <img class="content-img" src="/assets/images/movie5.jpg" alt="" />
+                                <div class="overlay-container">
+                                    <div class="inner-overlay">
+                                        <div class="d-flex flex-column justify-content-end">
+                                            <div class="icon-container d-flex justify-content-between mb-4 me-1">
+                                                <div class="d-flex flex-row justify-content-start">
+                                                    <a href=""><i class="bi bi-play-circle-fill mx-1 icons"></i></a>
+                                                    <i class="my-auto bi bi-eye-fill icons"></i>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <button class="btn btn-sm btn-outline-light playlist-btn p-0 px-sm-1">
+                                                        <i class="fa-solid fa-plus ps-1 ps-sm-0"></i>
+                                                        Add to playlist
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="card-hover-info p-1 p-sm-2 text-white">
+                                                <small class="fw-bold text-center d-block">
+                                                    <%= data[4].title %>
+                                                </small>
+                                                <div class="d-flex bottom-content">
+                                                    <small class="fw-bold pe-1">
+                                                        <%= data[4].rating %> • <%= data[4].certification %>
+                                                    </small>
+                                                    <small class="fw-bold ms-auto">
+                                                        <%= data[4].director %>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small">
+                            <div class="content-card">
+                                <img class="content-img" src="/assets/images/movie6.jpg" alt="" />
+                                <div class="overlay-container">
+                                    <div class="inner-overlay">
+                                        <div class="d-flex flex-column justify-content-end">
+                                            <div class="icon-container d-flex justify-content-between mb-4 me-1">
+                                                <div class="d-flex flex-row justify-content-start">
+                                                    <a href=""><i class="bi bi-play-circle-fill mx-1 icons"></i></a>
+                                                    <i class="my-auto bi bi-eye-fill icons"></i>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <button class="btn btn-sm btn-outline-light playlist-btn p-0 px-sm-1">
+                                                        <i class="fa-solid fa-plus ps-1 ps-sm-0"></i>
+                                                        Add to playlist
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="card-hover-info p-1 p-sm-2 text-white">
+                                                <small class="fw-bold text-center d-block">
+                                                    <%= data[5].title %>
+                                                </small>
+                                                <div class="d-flex bottom-content">
+                                                    <small class="fw-bold pe-1">
+                                                        <%= data[5].rating %> • <%= data[5].certification %>
+                                                    </small>
+                                                    <small class="fw-bold ms-auto">
+                                                        <%= data[5].director %>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="high">
+                            <div class="content-card">
+                                <img class="content-img" src="/assets/images/movie7.jpg" alt="" />
+                                <div class="overlay-container">
+                                    <div class="inner-overlay">
+                                        <div class="d-flex flex-column justify-content-end">
+                                            <div class="icon-container d-flex justify-content-between mb-4 me-1">
+                                                <div class="d-flex flex-row justify-content-start">
+                                                    <a href=""><i class="bi bi-play-circle-fill mx-1 icons"></i></a>
+                                                    <i class="my-auto bi bi-eye-fill icons"></i>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <button class="btn btn-sm btn-outline-light playlist-btn p-0 px-sm-1">
+                                                        <i class="fa-solid fa-plus ps-1 ps-sm-0"></i>
+                                                        Add to playlist
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="card-hover-info p-1 p-sm-2 text-white">
+                                                <small class="fw-bold text-center d-block">
+                                                    <%= data[6].title %>
+                                                </small>
+                                                <div class="d-flex bottom-content">
+                                                    <small class="fw-bold pe-1">
+                                                        <%= data[6].rating %> • <%= data[6].certification %>
+                                                    </small>
+                                                    <small class="fw-bold ms-auto">
+                                                        <%= data[6].director %>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small">
+                            <div class="content-card">
+                                <img class="content-img" src="/assets/images/movie8.jpg" alt="" />
+                                <div class="overlay-container">
+                                    <div class="inner-overlay">
+                                        <div class="d-flex flex-column justify-content-end">
+                                            <div class="icon-container d-flex justify-content-between mb-4 me-1">
+                                                <div class="d-flex flex-row justify-content-start">
+                                                    <a href=""><i class="bi bi-play-circle-fill mx-1 icons"></i></a>
+                                                    <i class="my-auto bi bi-eye-fill icons"></i>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <button class="btn btn-sm btn-outline-light playlist-btn p-0 px-sm-1">
+                                                        <i class="fa-solid fa-plus ps-1 ps-sm-0"></i>
+                                                        Add to playlist
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="card-hover-info p-1 p-sm-2 text-white">
+                                                <small class="fw-bold text-center d-block">
+                                                    <%= data[7].title %>
+                                                </small>
+                                                <div class="d-flex bottom-content">
+                                                    <small class="fw-bold pe-1">
+                                                        <%= data[7].rating %> • <%= data[7].certification %>
+                                                    </small>
+                                                    <small class="fw-bold ms-auto">
+                                                        <%= data[7].director %>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="medium">
+                            <div class="content-card">
+                                <img class="content-img" src="/assets/images/movie9.jpg" alt="" />
+                                <div class="overlay-container">
+                                    <div class="inner-overlay">
+                                        <div class="d-flex flex-column justify-content-end">
+                                            <div class="icon-container d-flex justify-content-between mb-4 me-1">
+                                                <div class="d-flex flex-row justify-content-start">
+                                                    <a href=""><i class="bi bi-play-circle-fill mx-1 icons"></i></a>
+                                                    <i class="my-auto bi bi-eye-fill icons"></i>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <button class="btn btn-sm btn-outline-light playlist-btn p-0 px-sm-1">
+                                                        <i class="fa-solid fa-plus ps-1 ps-sm-0"></i>
+                                                        Add to playlist
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="card-hover-info p-1 p-sm-2 text-white">
+                                                <small class="fw-bold text-center d-block">
+                                                    <%= data[8].title %>
+                                                </small>
+                                                <div class="d-flex bottom-content">
+                                                    <small class="fw-bold pe-1">
+                                                        <%= data[8].rating %> • <%= data[8].certification %>
+                                                    </small>
+                                                    <small class="fw-bold ms-auto">
+                                                        <%= data[8].director %>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="high">
+                            <div class="content-card">
+                                <img class="content-img" src="/assets/images/movie10.jpg" alt="" />
+                                <div class="overlay-container">
+                                    <div class="inner-overlay">
+                                        <div class="d-flex flex-column justify-content-end">
+                                            <div class="icon-container d-flex justify-content-between mb-4 me-1">
+                                                <div class="d-flex flex-row justify-content-start">
+                                                    <a href=""><i class="bi bi-play-circle-fill mx-1 icons"></i></a>
+                                                    <i class="my-auto bi bi-eye-fill icons"></i>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <button class="btn btn-sm btn-outline-light playlist-btn p-0 px-sm-1">
+                                                        <i class="fa-solid fa-plus ps-1 ps-sm-0"></i>
+                                                        Add to playlist
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="card-hover-info p-1 p-sm-2 text-white">
+                                                <small class="fw-bold text-center d-block">
+                                                    <%= data[9].title %>
+                                                </small>
+                                                <div class="d-flex bottom-content">
+                                                    <small class="fw-bold pe-1">
+                                                        <%= data[9].rating %> • <%= data[9].certification %>
+                                                    </small>
+                                                    <small class="fw-bold ms-auto">
+                                                        <%= data[9].director %>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small">
+                            <div class="content-card">
+                                <img class="content-img" src="/assets/images/movie11.jpg" alt="" />
+                                <div class="overlay-container">
+                                    <div class="inner-overlay">
+                                        <div class="d-flex flex-column justify-content-end">
+                                            <div class="icon-container d-flex justify-content-between mb-4 me-1">
+                                                <div class="d-flex flex-row justify-content-start">
+                                                    <a href=""><i class="bi bi-play-circle-fill mx-1 icons"></i></a>
+                                                    <i class="my-auto bi bi-eye-fill icons"></i>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <button class="btn btn-sm btn-outline-light playlist-btn p-0 px-sm-1">
+                                                        <i class="fa-solid fa-plus ps-1 ps-sm-0"></i>
+                                                        Add to playlist
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="card-hover-info p-1 p-sm-2 text-white">
+                                                <small class="fw-bold text-center d-block">
+                                                    <%= data[10].title %>
+                                                </small>
+                                                <div class="d-flex bottom-content">
+                                                    <small class="fw-bold pe-1">
+                                                        <%= data[10].rating %> • <%= data[10].certification %>
+                                                    </small>
+                                                    <small class="fw-bold ms-auto">
+                                                        <%= data[10].director %>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="medium">
+                            <div class="content-card">
+                                <img class="content-img" src="/assets/images/movie12.jpg" alt="" />
+                                <div class="overlay-container">
+                                    <div class="inner-overlay">
+                                        <div class="d-flex flex-column justify-content-end">
+                                            <div class="icon-container d-flex justify-content-between mb-4 me-1">
+                                                <div class="d-flex flex-row justify-content-start">
+                                                    <a href=""><i class="bi bi-play-circle-fill mx-1 icons"></i></a>
+                                                    <i class="my-auto bi bi-eye-fill icons"></i>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <button class="btn btn-sm btn-outline-light playlist-btn p-0 px-sm-1">
+                                                        <i class="fa-solid fa-plus ps-1 ps-sm-0"></i>
+                                                        Add to playlist
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="card-hover-info p-1 p-sm-2 text-white">
+                                                <small class="fw-bold text-center d-block">
+                                                    <%= data[11].title %>
+                                                </small>
+                                                <div class="d-flex bottom-content">
+                                                    <small class="fw-bold pe-1">
+                                                        <%= data[11].rating %> • <%= data[11].certification %>
+                                                    </small>
+                                                    <small class="fw-bold ms-auto">
+                                                        <%= data[11].director %>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="medium">
+                            <div class="content-card">
+                                <img class="content-img" src="/assets/images/movie13.jpg" alt="" />
+                                <div class="overlay-container">
+                                    <div class="inner-overlay">
+                                        <div class="d-flex flex-column justify-content-end">
+                                            <div class="icon-container d-flex justify-content-between mb-4 me-1">
+                                                <div class="d-flex flex-row justify-content-start">
+                                                    <a href=""><i class="bi bi-play-circle-fill mx-1 icons"></i></a>
+                                                    <i class="my-auto bi bi-eye-fill icons"></i>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <button class="btn btn-sm btn-outline-light playlist-btn p-0 px-sm-1">
+                                                        <i class="fa-solid fa-plus ps-1 ps-sm-0"></i>
+                                                        Add to playlist
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="card-hover-info p-1 p-sm-2 text-white">
+                                                <small class="fw-bold text-center d-block">
+                                                    <%= data[12].title %>
+                                                </small>
+                                                <div class="d-flex bottom-content">
+                                                    <small class="fw-bold pe-1">
+                                                        <%= data[12].rating %> • <%= data[12].certification %>
+                                                    </small>
+                                                    <small class="fw-bold ms-auto">
+                                                        <%= data[12].director %>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="high">
+                            <div class="content-card">
+                                <img class="content-img" src="/assets/images/movie14.jpg" alt="" />
+                                <div class="overlay-container">
+                                    <div class="inner-overlay">
+                                        <div class="d-flex flex-column justify-content-end">
+                                            <div class="icon-container d-flex justify-content-between mb-4 me-1">
+                                                <div class="d-flex flex-row justify-content-start">
+                                                    <a href=""><i class="bi bi-play-circle-fill mx-1 icons"></i></a>
+                                                    <i class="my-auto bi bi-eye-fill icons"></i>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <button class="btn btn-sm btn-outline-light playlist-btn p-0 px-sm-1">
+                                                        <i class="fa-solid fa-plus ps-1 ps-sm-0"></i>
+                                                        Add to playlist
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="card-hover-info p-1 p-sm-2 text-white">
+                                                <small class="fw-bold text-center d-block">
+                                                    <%= data[13].title %>
+                                                </small>
+                                                <div class="d-flex bottom-content">
+                                                    <small class="fw-bold pe-1">
+                                                        <%= data[13].rating %> • <%= data[13].certification %>
+                                                    </small>
+                                                    <small class="fw-bold ms-auto">
+                                                        <%= data[13].director %>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small">
+                            <div class="content-card">
+                                <img class="content-img" src="/assets/images/movie15.jpg" alt="" />
+                                <div class="overlay-container">
+                                    <div class="inner-overlay">
+                                        <div class="d-flex flex-column justify-content-end">
+                                            <div class="icon-container d-flex justify-content-between mb-4 me-1">
+                                                <div class="d-flex flex-row justify-content-start">
+                                                    <a href=""><i class="bi bi-play-circle-fill mx-1 icons"></i></a>
+                                                    <i class="my-auto bi bi-eye-fill icons"></i>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <button class="btn btn-sm btn-outline-light playlist-btn p-0 px-sm-1">
+                                                        <i class="fa-solid fa-plus ps-1 ps-sm-0"></i>
+                                                        Add to playlist
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="card-hover-info p-1 p-sm-2 text-white">
+                                                <small class="fw-bold text-center d-block">
+                                                    <%= data[14].title %>
+                                                </small>
+                                                <div class="d-flex bottom-content">
+                                                    <small class="fw-bold pe-1">
+                                                        <%= data[14].rating %> • <%= data[14].certification %>
+                                                    </small>
+                                                    <small class="fw-bold ms-auto">
+                                                        <%= data[14].director %>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="small">
+                            <div class="content-card">
+                                <img class="content-img" src="/assets/images/movie16.jpg" alt="" />
+                                <div class="overlay-container">
+                                    <div class="inner-overlay">
+                                        <div class="d-flex flex-column justify-content-end">
+                                            <div class="icon-container d-flex justify-content-between mb-4 me-1">
+                                                <div class="d-flex flex-row justify-content-start">
+                                                    <a href=""><i class="bi bi-play-circle-fill mx-1 icons"></i></a>
+                                                    <i class="my-auto bi bi-eye-fill icons"></i>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <button class="btn btn-sm btn-outline-light playlist-btn p-0 px-sm-1">
+                                                        <i class="fa-solid fa-plus ps-1 ps-sm-0"></i>
+                                                        Add to playlist
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="card-hover-info p-1 p-sm-2 text-white">
+                                                <small class="fw-bold text-center d-block">
+                                                    <%= data[15].title %>
+                                                </small>
+                                                <div class="d-flex bottom-content">
+                                                    <small class="fw-bold pe-1">
+                                                        <%= data[15].rating %> • <%= data[15].certification %>
+                                                    </small>
+                                                    <small class="fw-bold ms-auto">
+                                                        <%= data[15].director %>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="medium">
+                            <div class="content-card">
+                                <img class="content-img" src="/assets/images/movie17.jpg" alt="" />
+                                <div class="overlay-container">
+                                    <div class="inner-overlay">
+                                        <div class="d-flex flex-column justify-content-end">
+                                            <div class="icon-container d-flex justify-content-between mb-4 me-1">
+                                                <div class="d-flex flex-row justify-content-start">
+                                                    <a href=""><i class="bi bi-play-circle-fill mx-1 icons"></i></a>
+                                                    <i class="my-auto bi bi-eye-fill icons"></i>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <button class="btn btn-sm btn-outline-light playlist-btn p-0 px-sm-1">
+                                                        <i class="fa-solid fa-plus ps-1 ps-sm-0"></i>
+                                                        Add to playlist
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="card-hover-info p-1 p-sm-2 text-white">
+                                                <small class="fw-bold text-center d-block">
+                                                    <%= data[16].title %>
+                                                </small>
+                                                <div class="d-flex bottom-content">
+                                                    <small class="fw-bold pe-1">
+                                                        <%= data[16].rating %> • <%= data[16].certification %>
+                                                    </small>
+                                                    <small class="fw-bold ms-auto">
+                                                        <%= data[16].director %>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="high">
+                            <div class="content-card">
+                                <img class="content-img" src="/assets/images/movie18.jpg" alt="" />
+                                <div class="overlay-container">
+                                    <div class="inner-overlay">
+                                        <div class="d-flex flex-column justify-content-end">
+                                            <div class="icon-container d-flex justify-content-between mb-4 me-1">
+                                                <div class="d-flex flex-row justify-content-start">
+                                                    <a href=""><i class="bi bi-play-circle-fill mx-1 icons"></i></a>
+                                                    <i class="my-auto bi bi-eye-fill icons"></i>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <button class="btn btn-sm btn-outline-light playlist-btn p-0 px-sm-1">
+                                                        <i class="fa-solid fa-plus ps-1 ps-sm-0"></i>
+                                                        Add to playlist
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="card-hover-info p-1 p-sm-2 text-white">
+                                                <small class="fw-bold text-center d-block">
+                                                    <%= data[17].title %>
+                                                </small>
+                                                <div class="d-flex bottom-content">
+                                                    <small class="fw-bold pe-1">
+                                                        <%= data[17].rating %> • <%= data[17].certification %>
+                                                    </small>
+                                                    <small class="fw-bold ms-auto">
+                                                        <%= data[17].director %>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
