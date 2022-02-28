@@ -1,21 +1,26 @@
+main,
+footer {
+    padding: 10px;
+    background-color: rgb(0, 0, 0, 0.9) !important;
+}
+
 /* video-player styles */
 
 .video-container {
     display: flex;
     flex-direction: row;
-    background-color: rgba(0, 0, 0,0.1);
+    /* background-color: white; */
     justify-content: center;
     align-items: center;
     height: 80vh;
 }
 
 .c-video {
+    border: 1px solid rgba(252, 252, 252, 0.7);
     position: relative;
     max-width: 800px;
     width: 100%;
-    margin:5px;
     overflow: hidden;
-    border:1px solid white;
 }
 .c-video:hover .controls {
     transform: translateY(0);
@@ -33,7 +38,7 @@
     bottom: 0;
     width: 100%;
     /* flex-wrap: wrap; */
-    background-color: #c4c4c43a;
+    background-color: #c4c4c449;
     height: 3.5rem;
     transform: translateY(100%);
     transition: all 0.5s;
@@ -72,7 +77,7 @@
 .grey-bar {
     border-radius: 45px;
     height: 10px;
-    width: 90%;
+    width: 80%;
 
     top: 0;
     left: 0;
@@ -84,7 +89,7 @@
     border-bottom-left-radius: 22.5px;
     height: 10px;
     width: 0px;
-    background-color: black;
+    background-color: rgba(0, 0, 0);
 }
 
 .black-juice-completed {
@@ -156,8 +161,6 @@
     right: 0;
     width: 30%;
     height: 70%;
-    /* z-index: 1; */
-    /* display: none; */
 }
 
 .options {
@@ -169,9 +172,38 @@
 
 .full-screen {
     position: absolute;
-    right: 3%;
+    right: 1%;
+    bottom: 0;
 }
+
+.timer {
+    position: absolute;
+    top: -11%;
+    right: 0.5%;
+}
+
+footer.row {
+    overflow: hidden;
+}
+
+footer a i {
+    color: aliceblue !important;
+}
+
+footer a i:hover {
+    color: rgb(168, 154, 154) !important;
+}
+
+/* Media-Queries */
 @media (max-width: 700px) {
+    .full-screen {
+        bottom: -15%;
+    }
+    .timer {
+        top: -13%;
+        right: 0;
+        font-size: 0.8rem;
+    }
     .upper-holder {
         height: 1.5rem;
     }
@@ -224,6 +256,11 @@
     #rounded-chevron-left {
         font-size: 0.7rem !important;
     }
+    .timer {
+        top: -10%;
+
+        font-size: 0.6rem;
+    }
 }
 
 @media (max-width: 400px) {
@@ -237,11 +274,12 @@
     }
 
     .grey-bar {
-        height: 6px;
+        width: 75%;
+        height: 5px;
         transform: translateY(140%);
     }
     .black-juice {
-        height: 6px;
+        height: 5px;
     }
     .buttons i {
         font-size: 0.8rem !important;
@@ -263,3 +301,20 @@
         font-size: 0.5rem !important;
     }
 }
+
+@media (max-width: 380px) {
+    .timer {
+        top: -10%;
+        right: 0%;
+        font-size: 0.5rem;
+    }
+    #side-overlay h4,
+    #side-overlay h5,
+    #side-overlay p {
+        margin: 0rem;
+    }
+    #side-overlay {
+        width: 30%;
+        font-size: 0.1rem !important;
+    }
+} ;

@@ -1,73 +1,69 @@
 <% layout("layout/boilerplate") %>
 
-<div class="video-container">
-    <div class="c-video">
-        <!-- Chevron-button-for-opening-and-closing-of-sideoverlay -->
-        <div id="rounded-chevron-left">
-            <i class="fa-solid fa-circle-chevron-left fa-3x"></i>
-        </div>
-        <!-- Side-Overlay-with-descriptions -->
-        <div id="side-overlay" class="side-overlay-transition">
-            <h4 class="ps-1">Italian Job</h4>
-            <p class="ps-1 fw-bold text-muted">8.4 Imdb•1hr 52min•UA</p>
-            <h5 class="ps-1">Star Cast</h5>
-            <div class="ps-2 fw-bold text-muted">
-                <p>• Matt Demon</p>
-                <p>• Angelina Jolie</p>
-                <p>• Julia Roberts</p>
-                <p>• Samantha Ruth</p>
+<main>
+    <div class="video-container">
+        <div class="c-video">
+            <!-- Chevron-button-for-opening-and-closing-of-sideoverlay -->
+            <div id="rounded-chevron-left">
+                <i class="fa-solid fa-circle-chevron-left fa-3x"></i>
             </div>
-        </div>
-
-        <!-- Upper-grey-bar-for-settings-and-back-button -->
-        <div class="upper-holder">
-            <div class="chevron mx-3">
-                <i class="fa-solid fa-chevron-left"></i>
+            <!-- Side-Overlay-with-descriptions -->
+            <div id="side-overlay" class="side-overlay-transition">
+                <h4 class="ps-1">Italian Job</h4>
+                <p class="ps-1 fw-bold text-muted">
+                    8.4 Imdb•1hr 52min•UA
+                </p>
+                <h5 class="ps-1">Star Cast</h5>
+                <div class="ps-2 fw-bold text-muted">
+                    <p>• Matt Demon</p>
+                    <p>• Angelina Jolie</p>
+                    <p>• Julia Roberts</p>
+                    <p>• Samantha Ruth</p>
+                </div>
             </div>
-            <div class="mx-3 fs-5" id="options-btn">
-                <i class="fa-solid fa-ellipsis-vertical"></i>
+
+            <!-- Upper-grey-bar-for-settings-and-back-button -->
+            <div class="upper-holder">
+                <div class="chevron mx-3">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="mx-3 fs-5" id="options-btn">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
             </div>
-        </div>
 
-        <!-- Video-player -->
+            <!-- Video-player -->
 
-        <video src="/assets/videos/Stranger_Things.mp4" class="video"></video>
-        <!-- Lower-grey-bar-for-controls -->
-        <div class="controls">
-            <!-- grey-juice-bar and juice -->
-            <div class="grey-bar d-inline" id="grey-bar">
-                <div class="black-juice"></div>
-            </div>
-            <!-- play-pause-forward-backward-buttons -->
-            <div class="buttons">
-                <span class="fs-4"
-                    ><button id="backward" data-skip="5">
-                        <i
-                            id=""
-                            class="fa-solid text-light fs-5 fa-backward forward-10"
-                        ></i>
-                    </button>
-                </span>
-                <span
-                    ><i
-                        id="pause-play"
-                        class="fa-solid text-light fa-play fs-4 mx-1 forward-10"
-                    ></i
-                ></span>
-                <span class="fs-4"
-                    ><button id="forward" data-skip="5">
-                        <i
-                            id=""
-                            class="fa-solid text-light fs-5 fa-forward forward-10"
-                        ></i>
-                    </button>
-                </span>
+            <video src="/assets/videos/Stranger_Things.mp4" class="video"></video>
+            <!-- Lower-grey-bar-for-controls -->
+            <div class="controls">
+                <div></div>
+                <!-- grey-juice-bar and juice -->
+                <div class="grey-bar d-inline" id="grey-bar">
+                    <div class="black-juice"></div>
+                </div>
+                <span id="timer" class="timer text-light">00.00.00</span>
 
-                <span id="full-screen" class="full-screen fs-4">
-                    <i class="fa-solid text-light fa-expand"></i>
-                </span>
+                <!-- play-pause-forward-backward-buttons -->
+                <div class="buttons">
+                    <span class="fs-6"><button id="backward" data-skip="5">
+                            <i id="" class="text-light fa-solid fs-5 fa-backward forward-10"></i>
+                        </button>
+                    </span>
+                    <span class="text-light"><i id="pause-play"
+                            class="fs-5 fa-solid fa-play mx-1 forward-10"></i></span>
+                    <span class="fs-6"><button id="forward" data-skip="5">
+                            <i id="" class="text-light fa-solid fs-5 fa-forward forward-10"></i>
+                        </button>
+                    </span>
+
+                    <span id="full-screen" class="full-screen fs-4 text-dark">
+                        <i class="fa-solid fa-expand"></i>
+                    </span>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</main>
+
 <script src="/javascripts/script.js" ></script>
