@@ -279,7 +279,7 @@ h2 {
 	.watch-now-btn,
 	.add-to-playlist-btn {
 		font-size: small !important;
-		padding: 2px 4px !important;
+		padding: 2px !important;
 	}
 
 	.icon-btns button {
@@ -299,5 +299,10 @@ h2 {
 
 	.main {
 		width: 99%;
+	}
+	.watch-now-btn,
+	.add-to-playlist-btn {
+		font-size: small !important;
+		padding: 2px !important;
 	}
 }
