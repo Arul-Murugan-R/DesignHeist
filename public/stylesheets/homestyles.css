@@ -250,9 +250,9 @@ h2 {
 }
 
 @media (max-width: 600px) {
-	.home-div {
-		/* margin-top: 61px; */
-	}
+	/* .home-div {
+		margin-top: 61px;
+	} */
 
 	.main {
 		width: 95%;
@@ -288,9 +288,9 @@ h2 {
 }
 
 @media (max-width: 500px) {
-	.home-div {
-		/* margin-top: 59px; */
-	}
+	/* .home-div {
+		margin-top: 59px;
+	} */
 
 	.slider-cards {
 		width: 150px;
